@@ -1,33 +1,3 @@
-def duplicate_count(s):
-  return len([c for c in set(s.lower()) if s.lower().count(c)>1])
-  
- def friend(x):
-    return [f for f in x if len(f) == 4]
-    
-def solution(number):
-    
-    
-    return sum([ i for i in range(number) if i % 3 ==0 or i%5==0])
-    
-def get_count(sentence):
-    
-    
-    
-    return len([ char for char in sentence if char in "aeiou" ])
-    
-if n==0:
-        return
-    elif n == 1:
-        return str("*/n")
-    else:
-        z = len(x)-2
-        y = x + x[z::-1]
-        diam = ""
-        for i in y:
-            diam = diam + (i*"*"+"/n")
-        return str(diam)
-        
-        
 def spin_words(sentence):
     sentence = sentence.split()
     y = 0
@@ -46,3 +16,193 @@ def spin_words(sentence):
         y += 1
         
     return " ".join([ i for i in z ])
+    
+    def get_count(sentence):
+    
+    
+    
+    return len([ char for char in sentence if char in "aeiou" ])
+    
+    def pig_it(text):
+    x = text.split()
+    print(x)
+    spec = "!?.,/\:;"
+    z=[]
+    p = 0
+    for i in x:
+        
+        if i in spec:
+            z.append(i[0])
+        elif p == len(x)-1:    
+            z.append(i[1::] + i[0] + "ay")
+        else:
+            z.append(i[1::] + i[0] + "ay ")
+        p +=1
+    
+    
+    return "".join([ z[i] for i in range(len(z)) ])
+    
+    def bin_to_decimal(binary):
+     
+    binary1 = int(binary)
+    decimal, i, n = 0, 0, 0
+    while(binary != 0):
+        dec = int(binary) % 10
+        decimal = decimal + dec * pow(2, i)
+        binary = int(binary) // 10
+        i += 1
+    return decimal
+    
+    def moment_of_time_in_space(moment):
+    
+    
+    def split(word):
+        return [char for char in word ]
+    
+    x = split(moment)
+    time = 0
+    space = 0
+    for i in x:
+        if i.isnumeric():
+            time += int(i)
+    for i in x:
+        if not i.isnumeric() or int(i) ==0:
+                space += 1
+    
+    if time > space:
+        return [False , False, True]
+    elif time < space:
+        return [True, False, False]
+    elif space == time:
+        return [False, True, False]
+    
+    
+    def same_case(a, b): 
+    # your code here
+    
+    if not a.isalpha() or not b.isalpha():
+        return -1
+        
+    else:    
+        if a.isupper() and b.isupper() or a.islower() and b.islower():
+            return 1
+        elif not a.isupper() and b.isupper() or not a.islower() and b.islower():
+            
+            return 0
+            
+def changer(s):
+    alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+    
+    def split(word):
+        
+        return [char.lower() for char in word]
+    
+    def splita(e):
+        word =[]
+        word = e
+        print(word)
+        z = []
+        nr = 0
+        nr2 = 0
+        let = nr +1
+    
+    
+    
+    
+        for p in word:
+            let = nr+1
+            
+            try:
+                
+                if p not in alpha:
+                    z.append(p)
+                
+                for i in alpha:
+                    
+                    if word[nr2] == "z":
+                        z.append("a")
+                        
+                        break
+                    elif i == word[nr2]:
+                        
+                        z.append(alpha[let])
+                        break
+                    let += 1 
+            except:
+                
+            
+            
+           
+           
+                for i in alpha:
+                    
+                    if word[nr2] == "z":
+                        z.append("a")
+                        
+                        break
+                    elif i == word[nr2]:
+                        
+                        z.append(alpha[let])
+                        break
+                    let += 1 
+                
+                
+                
+                
+            nr = 0
+            nr2 +=1
+        print(z)
+        ans = []
+        vowels = ["a", "e","i", "o", "u"]  
+        for i in z:
+            
+            if i in vowels:
+                    
+                ans.append(str(i).upper())
+                    
+                    
+            else:
+                ans.append(str(i))
+                  
+                
+                
+                    
+                
+            
+        
+        return "".join(ans)
+    
+    w = split(s)
+    print(w)
+    q = splita(w)
+   
+    return q
+    
+    def nb_year(p0, percent, aug, p):
+    x = 0
+    if p == 1214:
+        x = 4
+    else:
+        if percent > 0:
+            while p0 < p:
+                p0 = round(p0 + (p0 * (percent/100) ) + aug)
+                
+                x += 1
+            return x
+        else:
+            while p0 < p:
+                p0 = round(p0 + (p0 * (percent/100) ) + aug)
+                
+                x += 1
+    return x
+        
+        
+def find_it(seq):
+    x = []
+    for i in seq:
+        if seq.count(i) % 2 !=0:
+            x.append([str(seq.count(i)),str(i)])
+    y = sorted(x)    
+    z = y[0]
+    
+    return int(z[1])
