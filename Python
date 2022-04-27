@@ -1,0 +1,48 @@
+def duplicate_count(s):
+  return len([c for c in set(s.lower()) if s.lower().count(c)>1])
+  
+ def friend(x):
+    return [f for f in x if len(f) == 4]
+    
+def solution(number):
+    
+    
+    return sum([ i for i in range(number) if i % 3 ==0 or i%5==0])
+    
+def get_count(sentence):
+    
+    
+    
+    return len([ char for char in sentence if char in "aeiou" ])
+    
+if n==0:
+        return
+    elif n == 1:
+        return str("*/n")
+    else:
+        z = len(x)-2
+        y = x + x[z::-1]
+        diam = ""
+        for i in y:
+            diam = diam + (i*"*"+"/n")
+        return str(diam)
+        
+        
+def spin_words(sentence):
+    sentence = sentence.split()
+    y = 0
+    z = []
+    for w in sentence:
+        print(w)
+        
+        if len(w) >= 5 :
+            z.append(w[::-1]) 
+       
+        else:
+            z.append(w)
+            
+            
+
+        y += 1
+        
+    return " ".join([ i for i in z ])
